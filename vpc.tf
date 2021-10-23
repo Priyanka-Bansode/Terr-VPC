@@ -29,7 +29,7 @@ tags = {
     }
 }
 
-/*resource "aws_subnet" "public_subnet2" {
+resource "aws_subnet" "public_subnet2" {
     vpc_id = aws_vpc.pipeline-demo.id
     cidr_block = "${var.public_subnet_2_cidr}"
     availability_zone = "us-east-2b"
@@ -38,7 +38,7 @@ tags = {
 tags = {
         name = "Public subnet 2"
     }
-}*/
+}
 
 resource "aws_route_table" "public_route_table" {
     vpc_id = aws_vpc.pipeline-demo.id
@@ -89,12 +89,12 @@ resource "aws_subnet" "private_subnet_1" {
     }
 }
 
-/*resource "aws_subnet" "private_subnet_2" {
+resource "aws_subnet" "private_subnet_2" {
     vpc_id = aws_vpc.pipeline-demo.id
     cidr_block = "${var.private_subnet_2_cidr}"
     availability_zone = "us-east-2b"
     map_public_ip_on_launch = true
     tags = {
         name = "Private subnet 2 | App tier"
-    }*/
+    }
 }
